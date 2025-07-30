@@ -1,10 +1,10 @@
-describe('testing login function', () => {
+describe('Register - success', () => {
   beforeEach(() => {
     cy.clearSession();
   });
   
-  it('should login', () => {
-    cy.login('lalmeidateste@yopmail.com', 'Lucas123')
-    cy.log('Login validated.')
+  it('Should create an account', () => {
+    const randomEmail = `user_${Date.now()}@test.com`;
+    cy.register('lucas', randomEmail, '123456');
   })
 })
