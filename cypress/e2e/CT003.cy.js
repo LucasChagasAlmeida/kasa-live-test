@@ -13,4 +13,8 @@ describe('testing login - success', () => {
     cy.login(randomEmail, '123456')
     cy.log('Login validated.')
   })
+
+  it('Should delete the account', () => {
+    cy.login_n_delete(randomEmail, '123456');
+  })
 })

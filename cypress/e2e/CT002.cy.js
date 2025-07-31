@@ -12,4 +12,8 @@ describe('Register - Fail', () => {
   it('Should NOT create an account', () => {
     cy.register('test', randomEmail, '123456', true);
   });
+
+  it('Should delete the account', () => {
+    cy.login_n_delete(randomEmail, '123456');
+  })
 });

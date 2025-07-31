@@ -18,4 +18,8 @@ describe('testing login - fail', () => {
     cy.log('Login failed.')
 
   })
+
+  it('Should delete the account', () => {
+    cy.login_n_delete(randomEmail, '123456');
+  })
 })

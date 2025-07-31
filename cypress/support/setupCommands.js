@@ -44,7 +44,6 @@ Cypress.Commands.add('register', (userName, email, password, shouldFail=false) =
 })
 
 Cypress.Commands.add('login', (email,password,shouldFail=false) => {
-
   cy.log('opening the webapp');
   cy.visit('/');
   
@@ -102,4 +101,10 @@ Cypress.Commands.add('register_n_logout', (userName, email, password) => {
   cy.register(userName, email, password);
   cy.get('.Toastify__toast.Toastify__toast-theme--colored.Toastify__toast--success', { timeout: 10000 }).should('not.exist'); 
   cy.logout();
+})
+
+Cypress.Commands.add('login_n_delete', (email, password) => {
+  cy.visit('/');
+  cy.login(email, password);
+  cy.delete_account();
 })
