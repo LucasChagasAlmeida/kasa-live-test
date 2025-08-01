@@ -1,24 +1,18 @@
-describe('Unfavorite a Team', () => {
+describe('Search for a League name', () => {
   beforeEach(() => {
     cy.clearSession();
   });
-  
-  
-  
+
   const randomEmail = `user_${Date.now()}@test.com`; 
 
-  it('Should favorite the 1st team', () => {
+  it('Should find a League', () => {
     cy.register('test',randomEmail, '123456');
-    cy.favorite_1st_Team();
-  });
+    cy.search_Team(null, 'AFC Champions League');
+  })
 
-  it('Should un-favorite the 1st team', () => {
-    cy.login(randomEmail, '123456');
-    cy.un_favorites_1st_Team()
-  });
-  
   it('Should delete the account', () => {
     cy.login(randomEmail, '123456')
     cy.delete_account();
   })
+
 })

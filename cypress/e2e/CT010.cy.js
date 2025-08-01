@@ -1,4 +1,4 @@
-describe('template spec', () => {
+describe('Check access to Favorites while not-logged', () => {
   beforeEach(() => {
     cy.clearSession();
   });

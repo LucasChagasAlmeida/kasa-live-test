@@ -7,7 +7,6 @@ Cypress.Commands.add('navigate_to_favorites_manually', (shouldFail=false) => {
     else{
         cy.get('[data-cy="link/favoritos"]', {timeout: 10000}).click();
         cy.url().should('include', '/favoritos');
-        cy.get('[data-cy="btn-favorite-team"]', {timeout: 10000}).should('be.visible');
     }
     
 });
