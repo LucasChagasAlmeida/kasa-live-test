@@ -63,3 +63,28 @@ Verificar se o usuário consegue buscar vídeos de melhores momentos com base no
 ## Resultado Esperado
 A busca por time filtra corretamente os vídeos exibidos, permitindo que o usuário encontre apenas os conteúdos relacionados ao time informado.
 
+
+
+# CT-019: Buscar vídeos por campeonato
+
+## Objetivo
+Verificar se o usuário consegue buscar vídeos de melhores momentos com base no nome do campeonato.
+
+## Pré-condições
+- A aplicação está acessível.
+- Existem vídeos cadastrados relacionados a diferentes campeonatos.
+- O usuário pode estar autenticado ou não.
+
+## Passos
+| Passo | Ação                                                               | Resultado Esperado                                                             |
+|-------|--------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| 1     | Acessar a seção de "Melhores Momentos"                             | A lista de vídeos disponíveis é exibida                                        |
+| 2     | Localizar o campo de busca ou filtro por campeonato                | Campo visível e editável                                                       |
+| 3     | Digitar o nome de um campeonato existente (ex: "Brasileirão Série A") | A lista de vídeos é atualizada com vídeos do campeonato selecionado         |
+| 4     | Digitar um nome de campeonato inexistente                          | Uma mensagem de "nenhum vídeo encontrado" é exibida                            |
+
+## Resultado Esperado
+A busca por campeonato filtra corretamente os vídeos exibidos, permitindo que o usuário encontre apenas conteúdos relacionados ao campeonato informado.
+
+
+
