@@ -1,13 +1,10 @@
-describe('See best moments from a League', () => {
+describe('See best moments from a team', () => {
   beforeEach(() => {
     cy.clearSession();
   });
 
-
-  it('Should open a moment from a League', () => {
-    cy.log('filter by a specific Championship/league')
-    cy.apply_filter(null, 'Copa do Nordeste');
-    cy.log('open the 1st video shown')
+  it('passes', () => {
+    cy.apply_filter('Madrid');
     cy.open_a_best_moment();
 
   })

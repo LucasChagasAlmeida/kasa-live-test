@@ -1,4 +1,4 @@
-describe('Register - success', () => {
+describe('Register', () => {
   beforeEach(() => {
     cy.clearSession();
   });

@@ -1,18 +1,9 @@
-describe('Search for a Team name', () => {
+describe('Check access to Favorites while not-logged', () => {
   beforeEach(() => {
     cy.clearSession();
   });
 
-  const randomEmail = `user_${Date.now()}@test.com`; 
-
-  it('Should find a team', () => {
-    cy.register('test',randomEmail, '123456');
-    cy.search_Team('Sport Recife');
+  it('Should have content on the favorite match', () => {
+    cy.navigate_to_favorites_manually(true);
   })
-
-  it('Should delete the account', () => {
-    cy.login(randomEmail, '123456');
-    cy.delete_account();
-  })
-
 })

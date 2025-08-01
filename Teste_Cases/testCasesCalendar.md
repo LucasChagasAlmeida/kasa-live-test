@@ -1,25 +1,3 @@
-# CT-019: Visualizar calendário com partidas salvas
-
-## Objetivo
-Verificar se o usuário consegue visualizar corretamente o calendário com as partidas que foram salvas/favoritadas.
-
-## Pré-condições
-- A aplicação está acessível.
-- O usuário está autenticado.
-- O usuário possui ao menos uma partida salva/favoritada.
-
-## Passos
-| Passo | Ação                                                        | Resultado Esperado                                                             |
-|-------|-------------------------------------------------------------|---------------------------------------------------------------------------------|
-| 1     | Fazer login na aplicação                                    | Usuário é autenticado com sucesso                                              |
-| 2     | Acessar a aba ou menu "Calendário"                          | O calendário pessoal do usuário é exibido                                      |
-| 3     | Verificar os dias marcados no calendário                    | Datas com partidas salvas estão destacadas                                     |
-| 4     | Clicar em uma data com partida marcada                      | Detalhes da partida (time, horário, campeonato) são exibidos corretamente      |
-
-## Resultado Esperado
-O calendário exibe visualmente as partidas que o usuário salvou, com detalhes acessíveis ao clicar nas datas marcadas.
-
-
 # CT-020: Adicionar partida ao calendário da Kasa.live
 
 ## Objetivo
@@ -42,7 +20,32 @@ Verificar se o usuário consegue adicionar uma partida ao calendário interno da
 A partida selecionada é corretamente adicionada ao calendário da Kasa.live do usuário, com confirmação visual e persistência da informação.
 
 
-# CT-021: Remover partida do calendário
+
+# CT-021: Visualizar calendário com partidas salvas
+
+## Objetivo
+Verificar se o usuário consegue visualizar corretamente o calendário com as partidas que foram Adicionadas.
+
+## Pré-condições
+- A aplicação está acessível.
+- O usuário está autenticado.
+- O usuário possui ao menos uma partida salva/favoritada.
+
+## Passos
+| Passo | Ação                                                        | Resultado Esperado                                                             |
+|-------|-------------------------------------------------------------|---------------------------------------------------------------------------------|
+| 1     | Fazer login na aplicação                                    | Usuário é autenticado com sucesso                                              |
+| 2     | Acessar a aba ou menu "Calendário"                          | O calendário pessoal do usuário é exibido                                      |
+| 3     | Verificar os dias marcados no calendário                    | Datas com partidas salvas estão destacadas                                     |
+| 4     | Clicar em uma data com partida marcada                      | Detalhes da partida (time, horário, campeonato) são exibidos corretamente      |
+
+## Resultado Esperado
+O calendário exibe visualmente as partidas que o usuário salvou, com detalhes acessíveis ao clicar nas datas marcadas.
+
+
+
+
+# CT-022: Remover partida do calendário
 
 ## Objetivo
 Verificar se o usuário consegue remover uma partida previamente adicionada ao calendário da Kasa.live.
@@ -65,7 +68,7 @@ A partida é removida com sucesso do calendário da Kasa.live e não aparece mai
 
 
 
-# CT-022: Conectar com Google Calendar
+# CT-023: Conectar com Google Calendar
 
 ## Objetivo
 Verificar se o usuário consegue conectar sua conta da Kasa.live ao Google Calendar com sucesso.
@@ -79,8 +82,8 @@ Verificar se o usuário consegue conectar sua conta da Kasa.live ao Google Calen
 | Passo | Ação                                                           | Resultado Esperado                                                             |
 |-------|----------------------------------------------------------------|---------------------------------------------------------------------------------|
 | 1     | Fazer login na Kasa.live                                       | Usuário autenticado com sucesso                                                |
-| 2     | Acessar a área de configurações de calendário                  | Opção de integração com Google Calendar é exibida                              |
-| 3     | Clicar no botão "Conectar com Google Calendar"                | Janela de autenticação do Google é aberta                                      |
+| 2     | Abrir modal de perfil                   | Opção de integração com Google Calendar é exibida                              |
+| 3     | Ativar o switch de "Conectar com Google Calendar"                | Janela de autenticação do Google é aberta                                      |
 | 4     | Selecionar a conta Google e conceder as permissões necessárias | A conta é vinculada com sucesso e uma mensagem de confirmação é exibida        |
 
 ## Resultado Esperado
@@ -88,7 +91,7 @@ A conta do Google é conectada com sucesso, com autorização explícita e persi
 
 
 
-# CT-023: Validar sincronização com Google Calendar
+# CT-024: Validar sincronização com Google Calendar
 
 ## Objetivo
 Verificar se as partidas adicionadas ao calendário da Kasa.live também são corretamente sincronizadas com o Google Calendar do usuário.
@@ -110,25 +113,3 @@ Verificar se as partidas adicionadas ao calendário da Kasa.live também são co
 ## Resultado Esperado
 A sincronização é feita corretamente e as partidas da Kasa.live são refletidas no Google Calendar do usuário de forma automática e precisa.
 
-
-
-# CT-024: Falha na conexão com Google Calendar (ex: conta inválida)
-
-## Objetivo
-Verificar se a aplicação trata adequadamente os erros durante a tentativa de conexão com o Google Calendar, como conta inválida, cancelamento do login ou falha na autenticação.
-
-## Pré-condições
-- A aplicação está acessível.
-- O usuário está autenticado.
-- O navegador permite popups, mas o processo de autenticação será interrompido ou falhará.
-
-## Passos
-| Passo | Ação                                                                 | Resultado Esperado                                                              |
-|-------|----------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| 1     | Fazer login na Kasa.live                                             | Usuário autenticado com sucesso                                                 |
-| 2     | Navegar até a área de integração com Google Calendar                 | Opção de conexão visível                                                        |
-| 3     | Clicar no botão "Conectar com Google Calendar"                       | Janela de autenticação do Google é exibida                                      |
-| 4     | Simular falha: negar permissão, usar conta inválida ou cancelar     | A integração falha e uma mensagem clara de erro é exibida                       |
-
-## Resultado Esperado
-A aplicação detecta corretamente a falha na tentativa de conexão e apresenta um feedback claro ao usuário, sem travar o sistema ou perder contexto.
