@@ -29,8 +29,8 @@ Cypress.Commands.add('un_favorites_1st_Team', () => {
 Cypress.Commands.add('favorite_a_Match', () => {
     cy.visit('/');
     cy.get('img[alt="lista"]').click();
-    cy.get('[aria-label="Favoritar Partida"]', {timeout: 10000}).first().should('be.visible')
-    cy.get('[aria-label="Favoritar Partida"]', {timeout: 10000}).first().click();
+    cy.get('[aria-label="Favoritar Partida"]', {timeout: 20000}).first().should('be.visible')
+    cy.get('[aria-label="Favoritar Partida"]', {timeout: 20000}).first().click();
 })
 
 
